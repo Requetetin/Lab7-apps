@@ -1,12 +1,22 @@
 package com.example.lab5
 
-class Resultado {
-    private var rating = 0
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+
+class Resultado : ViewModel() {
+
+    val message = MutableLiveData<Any>()
+
+    private var rating = 0.0f
     private var cantidad = 0
     private var respuestas = ""
 
-    fun plusRating(a: Int){
-        rating = rating + a
+    fun setMsgCommunicator(msg:String){
+        message.setValue(msg)
+    }
+
+    fun plusRating(a: Float){
+        rating += a
         cantidad ++
     }
 
@@ -18,13 +28,12 @@ class Resultado {
         return respuestas
     }
 
-    fun getRating(): String{
-        val s = rating/cantidad
-        return s.toString()
+    fun getRating(): Float{
+        return rating / cantidad
     }
 
-    fun getEncuestas(): String{
-        return cantidad.toString()
+    fun getEncuestas(): Int{
+        return cantidad
     }
 
 }

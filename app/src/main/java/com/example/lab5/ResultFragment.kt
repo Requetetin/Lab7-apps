@@ -9,10 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import com.example.lab5.databinding.FragmentQuestionBinding
 import com.example.lab5.databinding.FragmentResultBinding
 import java.lang.Exception
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,8 +31,8 @@ private const val ARG_PARAM2 = "param2"
  */
 class ResultFragment : Fragment() {
 
+    private var r: Resultado?=null
 
-    val r = Resultado()
 
 
     override fun onCreateView(inflater: LayoutInflater,container:ViewGroup?,
@@ -38,19 +40,20 @@ class ResultFragment : Fragment() {
         val binding: FragmentResultBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_result , container, false
         )
-        val s:String = "Rating: " + r.getRating()
-        val t:String = "Encuestas: " + r.getEncuestas()
+        r= ViewModelProviders.of(activity!!).get(Resultado::class.java)
+        val s:String = "Rating: " + r!!.getRating().toString()
+        val t:String = "Encuestas: " + r!!.getEncuestas().toString()
         binding.rating = s
         binding.encuestas = t
 
 
 
         binding.button3.setOnClickListener(){
-            view!!.findNavController().navigate(R.id.action_resultFragment_to_questionFragment)
+            view!!.findNavController().navigate(R.id.action_resultFragment_to_startFragment)
         }
 
         binding.button4.setOnClickListener(){
-            Toast.makeText(activity, r.getRespuestas(), Toast.LENGTH_LONG).show()
+            Toast.makeText(activity, r!!.getRespuestas(), Toast.LENGTH_LONG).show()
         }
 
 

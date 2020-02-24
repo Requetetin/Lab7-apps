@@ -1,11 +1,18 @@
 package com.example.lab5
 
-class Encuesta {
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+
+class Encuesta : ViewModel() {
+
+    val message = MutableLiveData<Any>()
 
     private var count = 0
     private val questions: MutableList<String> = mutableListOf<String>("Tiene duda o pregunta?")
 
-
+    fun setMsgCommunicator(msg:String){
+        message.setValue(msg)
+    }
 
     fun getFirst(): String {
         count ++
@@ -13,8 +20,9 @@ class Encuesta {
     }
 
     fun getNext(): String {
+        val s = questions.get(count)
         count ++
-        return questions.get(count)
+        return s
     }
 
     fun addQuestion(s: String){

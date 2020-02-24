@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import com.example.lab5.databinding.FragmentQuestionBinding
 import com.example.lab5.databinding.FragmentStartBinding
@@ -28,8 +29,9 @@ private const val ARG_PARAM2 = "param2"
  */
 class QuestionFragment : Fragment() {
 
-    val q = Encuesta()
-    val r = Resultado()
+    private var r: Resultado?=null
+    private var q: Encuesta?=null
+
 
 
     override fun onCreateView(inflater: LayoutInflater,container:ViewGroup?,
@@ -37,15 +39,17 @@ class QuestionFragment : Fragment() {
         val binding: FragmentQuestionBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_question , container, false
         )
+        r= ViewModelProviders.of(activity!!).get(Resultado::class.java)
+        q= ViewModelProviders.of(activity!!).get(Encuesta::class.java)
         binding.hinted="Ingrese su respuesta"
         binding.text="Next"
 
-        binding.question=q.getFirst()
+        binding.question= q!!.getFirst()
 
         binding.button.setOnClickListener(){
-            r.plusRespuestas(binding.editText2.text.toString())
+            r!!.plusRespuestas(binding.editText2.text.toString())
             try{
-                q.getNext()
+                binding.question= q!!.getNext()
             }catch (e: Exception){
                 view!!.findNavController().navigate(R.id.action_questionFragment_to_ratingFragment)
             }
