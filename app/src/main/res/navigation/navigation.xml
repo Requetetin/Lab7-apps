@@ -27,7 +27,8 @@
         tools:layout="@layout/fragment_add" >
         <action
             android:id="@+id/action_addFragment_to_startFragment"
-            app:destination="@id/startFragment" />
+            app:destination="@id/startFragment"
+            app:popUpTo="@+id/startFragment" />
     </fragment>
     <fragment
         android:id="@+id/questionFragment"
@@ -50,7 +51,8 @@
         tools:layout="@layout/fragment_result" >
         <action
             android:id="@+id/action_resultFragment_to_startFragment"
-            app:destination="@id/startFragment" />
+            app:destination="@id/startFragment"
+            app:popUpTo="@+id/startFragment" />
     </fragment>
     <fragment
         android:id="@+id/ratingFragment"

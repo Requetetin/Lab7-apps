@@ -9,8 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import com.example.lab5.databinding.FragmentQuestionBinding
 import com.example.lab5.databinding.FragmentResultBinding
 import java.lang.Exception
@@ -32,6 +34,7 @@ private const val ARG_PARAM2 = "param2"
 class ResultFragment : Fragment() {
 
     private var r: Resultado?=null
+
 
 
 

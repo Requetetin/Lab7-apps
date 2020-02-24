@@ -8,7 +8,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
+import androidx.navigation.ui.AppBarConfiguration
 import com.example.lab5.databinding.FragmentStartBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -25,6 +27,7 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class StartFragment : Fragment() {
+
 
 
     override fun onCreateView(inflater: LayoutInflater,container:ViewGroup?,

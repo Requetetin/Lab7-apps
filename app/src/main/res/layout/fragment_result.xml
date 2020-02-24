@@ -10,6 +10,7 @@
             name="encuestas"
             type="String" />
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -20,7 +21,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:text="Resultados"
             android:textSize="40sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,7 +32,7 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:text="@{rating}"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +43,7 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:text="@{encuestas}"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +54,7 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:text="Nueva Encuesta"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -63,10 +64,11 @@
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="10dp"
             android:text="Ver respuestas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button3" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
