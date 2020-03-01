@@ -54,7 +54,9 @@ class ResultFragment : Fragment() {
 
         var texto = ""
         for(i in 0..(data.size-1)){
-             texto = data.get(i).id.toString() + " " + data.get(i).firstAnswer + " " + data.get(i).ratingStar.toString()
+            var s = data.get(i).id.toString() + " " + data.get(i).firstAnswer + " " + data.get(i).ratingStar.toString()
+            texto += s
+            texto += "\n"
         }
         binding.results = texto
 
