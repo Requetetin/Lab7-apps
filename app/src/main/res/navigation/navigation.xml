@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/startFragment"
-        android:name="com.example.lab5.StartFragment"
+        android:name="com.example.lab6.StartFragment"
         android:label="fragment_start"
         tools:layout="@layout/fragment_start" >
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/addFragment"
-        android:name="com.example.lab5.AddFragment"
+        android:name="com.example.lab6.AddFragment"
         android:label="fragment_add"
         tools:layout="@layout/fragment_add" >
         <action
@@ -32,7 +32,7 @@
     </fragment>
     <fragment
         android:id="@+id/questionFragment"
-        android:name="com.example.lab5.QuestionFragment"
+        android:name="com.example.lab6.QuestionFragment"
         android:label="fragment_question"
         tools:layout="@layout/fragment_question" >
         <action
@@ -41,12 +41,12 @@
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.example.lab5.AboutFragment"
+        android:name="com.example.lab6.AboutFragment"
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
     <fragment
         android:id="@+id/resultFragment"
-        android:name="com.example.lab5.ResultFragment"
+        android:name="com.example.lab6.ResultFragment"
         android:label="fragment_result"
         tools:layout="@layout/fragment_result" >
         <action
@@ -56,7 +56,7 @@
     </fragment>
     <fragment
         android:id="@+id/ratingFragment"
-        android:name="com.example.lab5.RatingFragment"
+        android:name="com.example.lab6.RatingFragment"
         android:label="RatingFragment" >
         <action
             android:id="@+id/action_ratingFragment_to_resultFragment"

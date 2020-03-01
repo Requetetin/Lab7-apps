@@ -1,8 +1,5 @@
-package com.example.lab5
+package com.example.lab6
 
-import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -10,8 +7,8 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import com.example.lab5.databinding.FragmentAddBinding
-import com.example.lab5.databinding.FragmentQuestionBinding
+import com.example.lab6.databinding.FragmentAddBinding
+import com.example.lab6.databinding.FragmentQuestionBinding
 import kotlinx.android.synthetic.main.fragment_add.*
 
 

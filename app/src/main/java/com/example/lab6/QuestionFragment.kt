@@ -1,7 +1,5 @@
-package com.example.lab5
+package com.example.lab6
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,8 +8,8 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
-import com.example.lab5.databinding.FragmentQuestionBinding
-import com.example.lab5.databinding.FragmentStartBinding
+import com.example.lab6.databinding.FragmentQuestionBinding
+import com.example.lab6.databinding.FragmentStartBinding
 import java.lang.Exception
 
 // TODO: Rename parameter arguments, choose names that match
@@ -48,6 +46,7 @@ class QuestionFragment : Fragment() {
 
         binding.button.setOnClickListener(){
             r!!.plusRespuestas(binding.editText2.text.toString())
+            r!!.setInmediata(binding.editText2.text.toString())
             try{
                 binding.question= q!!.getNext()
             }catch (e: Exception){

@@ -1,19 +1,14 @@
-package com.example.lab5
+package com.example.lab6
 
-import android.content.Context
-import android.media.Rating
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
-import com.example.lab5.databinding.FragmentQuestionBinding
-import com.example.lab5.databinding.FragmentRatingBinding
+import com.example.lab6.databinding.FragmentRatingBinding
 
 class RatingFragment : Fragment() {
 
@@ -34,6 +29,9 @@ class RatingFragment : Fragment() {
 
         binding.button2.setOnClickListener {
             rate = binding.ratingBar.rating
+            val answers = Answers(r!!.getInmediata(),binding.ratingBar.rating.toDouble())
+            val db = DataBaseHandler(context)
+            db.insertData(answers)
             r!!.plusRating(rate)
             view!!.findNavController().navigate(R.id.action_ratingFragment_to_resultFragment)
         }

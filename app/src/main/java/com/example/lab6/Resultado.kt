@@ -1,4 +1,4 @@
-package com.example.lab5
+package com.example.lab6
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -10,9 +10,18 @@ class Resultado : ViewModel() {
     private var rating = 0.0f
     private var cantidad = 0
     private var respuestas = ""
+    private var respuestainmediata=""
 
     fun setMsgCommunicator(msg:String){
         message.setValue(msg)
+    }
+
+    fun setInmediata(rsp: String){
+        respuestainmediata = rsp
+    }
+
+    fun getInmediata():String{
+        return respuestainmediata
     }
 
     fun plusRating(a: Float){
