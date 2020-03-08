@@ -8,7 +8,6 @@ import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.lab6.databinding.FragmentAddBinding
-import com.example.lab6.databinding.FragmentQuestionBinding
 import kotlinx.android.synthetic.main.fragment_add.*
 
 

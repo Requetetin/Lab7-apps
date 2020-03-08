@@ -75,6 +75,10 @@ class ResultFragment : Fragment() {
             Toast.makeText(activity, r!!.getRespuestas(), Toast.LENGTH_LONG).show()
         }
 
+        binding.toCard.setOnClickListener(){
+            view!!.findNavController().navigate(R.id.action_resultFragment_to_recyclerFragment)
+        }
+
 
         return binding.root
     }

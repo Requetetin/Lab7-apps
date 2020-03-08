@@ -53,6 +53,9 @@
             android:id="@+id/action_resultFragment_to_startFragment"
             app:destination="@id/startFragment"
             app:popUpTo="@+id/startFragment" />
+        <action
+            android:id="@+id/action_resultFragment_to_recyclerFragment"
+            app:destination="@id/recyclerFragment" />
     </fragment>
     <fragment
         android:id="@+id/ratingFragment"
@@ -62,4 +65,8 @@
             android:id="@+id/action_ratingFragment_to_resultFragment"
             app:destination="@id/resultFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/recyclerFragment"
+        android:name="com.example.lab6.RecyclerFragment"
+        android:label="RecyclerFragment" />
 </navigation>
